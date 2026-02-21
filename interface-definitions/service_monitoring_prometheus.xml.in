@@ -47,6 +47,41 @@
                     <defaultValue>9342</defaultValue>
                   </leafNode>
                   #include <include/interface/vrf.xml.i>
+                  <node name="collectors">
+                    <properties>
+                      <help>Set collectors to be enabled</help>
+                    </properties>
+                    <children>
+                      <node name="bgp">
+                        <children>
+                          <leafNode name="peer-descriptions">
+                            <properties>
+                              <help>Export bgp peer's description as a label</help>
+                              <valueless/>
+                            </properties>
+                          </leafNode>
+                          <leafNode name="peer-groups">
+                            <properties>
+                              <help>Export the bgp peer's group as a label</help>
+                              <valueless/>
+                            </properties>
+                          </leafNode>
+                          <leafNode name="accepted-filtered-prefixes">
+                            <properties>
+                              <help>Export accepted and filtered prefixes</help>
+                              <valueless/>
+                            </properties>
+                          </leafNode>
+                        </children>
+                      </node>
+                      <leafNode name="vrrp">
+                        <properties>
+                          <help>Enable the VRRP collector</help>
+                          <valueless/>
+                        </properties>
+                      </leafNode>
+                    </children>
+                  </node>
                 </children>
               </node>
               <node name="blackbox-exporter">
